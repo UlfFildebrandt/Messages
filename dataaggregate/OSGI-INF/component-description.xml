@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" activate="activate" name="DataAggregate Registration">
+  <implementation class="arch.dataaggregate.RegisterComponent"/>
+  <reference bind="setServlet" cardinality="1..1" interface="arch.dataaggregate.IDataAggregate" name="DisplayServlet" policy="static" unbind="unsetServlet"/>
+  <reference name="aggregator"
+    interface="arch.dataaggregatorinterface.IDataAggregator"
+    bind="setAggregatorService"
+    unbind="unsetAggregatorService"
+    cardinality="0..n"
+    policy="dynamic"/>
+</scr:component>

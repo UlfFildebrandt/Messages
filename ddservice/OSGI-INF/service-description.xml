@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="Servlet Component">
+  <implementation class="arch.datadisplay.ui.DisplayServlet"/>
+  <reference bind="setDataAggregateService" interface="arch.dataaggregate.IDataAggregate" name="dataAggregateService" unbind="unsetDataAggregateService"/>
+  <service>
+     <provide interface="arch.datadisplay.ui.DisplayServlet"/>
+  </service>
+</scr:component>

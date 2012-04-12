@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" name="DataAggregate Component">
+  <implementation class="arch.dataaggregate.DataAggregate"/>
+  <reference bind="setDataSourceService" interface="arch.datasourceinterface.IDataSourceService" name="dataSourceService" unbind="unsetDataSourceService"/>
+  <service>
+     <provide interface="arch.dataaggregate.IDataAggregate"/>
+  </service>
+</scr:component>
